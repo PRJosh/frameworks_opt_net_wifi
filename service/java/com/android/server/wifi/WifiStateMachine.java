@@ -292,7 +292,7 @@ public class WifiStateMachine extends StateMachine implements WifiNative.WifiPno
             Log.wtf(TAG, "processRssiThreshold: Invalid rssi " + curRssi);
             return;
         }
-        for (int i = 0; i < mRssiRanges.length; i++) {
+        for (int i = 1; i < mRssiRanges.length; i++) {
             if (curRssi < mRssiRanges[i]) {
                 // Assume sorted values(ascending order) for rssi,
                 // bounded by high(127) and low(-128) at extremeties
